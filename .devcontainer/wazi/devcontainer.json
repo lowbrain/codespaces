@@ -1,5 +1,35 @@
 {
+	"name": "WaziDeveloper",
 	"build": {
-		"dockerfile": "./Dockerfile"
+		"dockerfile": "./Dockerfile",
+		"args": {
+			// Development Containers Images(Linux Universal)
+			// https://github.com/devcontainers/images/tree/main/src/universal
+			"UNIVERSAL_TAG": "1.6"
+		}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// Wazi Developer for VS Code Extensions
+				"/vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0/zopeneditor-3.0.0.vsix",
+				"/vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0/Zowe.vscode-extension-for-zowe-2.4.0.vsix",
+				"/vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0/zopendebug-2.3.0.vsix"
+			]
+		}
 	}
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
