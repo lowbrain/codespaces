@@ -1,2 +1,2 @@
-ARG TARGET_JAVA_VERSION=11
-FROM mcr.microsoft.com/vscode/devcontainers/java:${TARGET_JAVA_VERSION}
+ARG UNIVERSAL_TAG=2.1
+FROM mcr.microsoft.com/vscode/devcontainers/universal:${UNIVERSAL_TAG}
