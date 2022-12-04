@@ -5,32 +5,27 @@
 		"args": {
 			// Development Containers Images(Linux Universal)
 			// https://github.com/devcontainers/images/tree/main/src/universal
-			"UNIVERSAL_TAG": "1.6"
+			"UNIVERSAL_TAG": "1.5"
 		}
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers/features/common-utils:1": {},
-		"ghcr.io/devcontainers/features/desktop-lite:1": {}
-	},
+	"features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "./.devcontainer/wazi/postCreateCommand.sh",
 
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				// Wazi Developer for VS Code Extensions
-				"/vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0/zopeneditor-3.0.0.vsix",
-				"/vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0/Zowe.vscode-extension-for-zowe-2.4.0.vsix",
-				"/vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0/zopendebug-2.3.0.vsix"
+				"${HOME}/Wazi_for_VS_Code_v2.3.0/zopeneditor-3.0.0.vsix",
+				"${HOME}/Wazi_for_VS_Code_v2.3.0/Zowe.vscode-extension-for-zowe-2.4.0.vsix",
+				"${HOME}/Wazi_for_VS_Code_v2.3.0/zopendebug-2.3.0.vsix"
 			]
 		}
 	}
