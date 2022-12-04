@@ -6,7 +6,7 @@ RUN \
     npm install -g @zowe/cli@zowe-v2-lts --ignore-scripts \
     && zowe plugins install @ibm/rse-api-for-zowe-cli \
     # Wazi Developer for VS Code download
-    && wget https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/wazi/vscode/2.3.0/WDEU-C9SN33_Wazi_for_VS_Code_V2.3.0.zip \
     && mkdir -p /vscode/installableExtensions \
-    && unzip WDEU-C9SN33_Wazi_for_VS_Code_V2.3.0.zip -d /vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0 \
-    && rm -f WDEU-C9SN33_Wazi_for_VS_Code_V2.3.0.zip
+    && wget -P /vscode/installableExtensions https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/wazi/vscode/2.3.0/WDEU-C9SN33_Wazi_for_VS_Code_V2.3.0.zip \
+    && unzip /vscode/installableExtensions/WDEU-C9SN33_Wazi_for_VS_Code_V2.3.0.zip -d /vscode/installableExtensions/Wazi_for_VS_Code_v2.3.0 \
+    && rm -f /vscode/installableExtensions/WDEU-C9SN33_Wazi_for_VS_Code_V2.3.0.zip
