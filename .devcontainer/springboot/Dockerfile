@@ -1,12 +1,17 @@
 ARG VERSION_TAG=latest
 FROM mcr.microsoft.com/vscode/devcontainers/java:${VERSION_TAG}
 
+# OS Setting
 RUN \
-    # JPN Setting
+    # Locale setting for JPN
     apt-get update \
-    && apt-get install -y language-pack-ja-base language-pack-ja locales \
-    && locale-gen ja_JP.UTF-8 \
-    # Installing Chrome
-    && apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && curl -sSL https://dl.google.com/linux/direct/google-chrome-stable_current_$(dpkg --print-architecture).deb -o /tmp/chrome.deb \
-    && apt-get -y install /tmp/chrome.deb
+    && apt-get install -y task-japanese \
+    && sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen \
+    && locale-gen ja_JP.UTF-8
+
+# Development tools
+ARG GRADLE_VERSION=""
+ARG SPRINGBOOT_VERSION=""
+RUN \
+    echo ". /usr/local/sdkman/bin/sdkman-init.sh; sdk install gradle ${GRADLE_VERSION}" | bash \
+    && echo ". /usr/local/sdkman/bin/sdkman-init.sh; sdk install springboot ${SPRINGBOOT_VERSION}" | bash
