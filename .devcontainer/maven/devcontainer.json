@@ -1,6 +1,6 @@
 {
 	// Image or Dockerfile specific properties
-	"name": "SpringbootDeveloper",
+	"name": "GradleDeveloper",
 	"build": {
 		"dockerfile": "./Dockerfile",
 		"args": {
@@ -8,7 +8,7 @@
 			// https://github.com/devcontainers/images/tree/main/src/java
 			"VERSION_TAG": "17",
 			"GRADLE_VERSION": "7.6",
-			"SPRINGBOOT_VERSION": "3.0.0"
+			"SPRINGBOOT_VERSION": "3.8.6"
 		}
 	},
 
