@@ -13,5 +13,5 @@ RUN \
 ARG GRADLE_VERSION=""
 ARG SPRINGBOOT_VERSION=""
 RUN \
-    echo ". /usr/local/sdkman/bin/sdkman-init.sh; sdk install maven ${GRADLE_VERSION}" | bash \
+    echo ". /usr/local/sdkman/bin/sdkman-init.sh; sdk install maven ${MAVEN_VERSION}" | bash \
     && echo ". /usr/local/sdkman/bin/sdkman-init.sh; sdk install springboot ${SPRINGBOOT_VERSION}" | bash

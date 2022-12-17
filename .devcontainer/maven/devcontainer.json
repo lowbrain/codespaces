@@ -7,8 +7,8 @@
 			// Development Containers Images(Linux Universal)
 			// https://github.com/devcontainers/images/tree/main/src/java
 			"VERSION_TAG": "17",
-			"GRADLE_VERSION": "7.6",
-			"SPRINGBOOT_VERSION": "3.8.6"
+			"MAVEN_VERSION": "3.8.6",
+			"SPRINGBOOT_VERSION": "3.0.0"
 		}
 	},
 
